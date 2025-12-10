@@ -135,10 +135,10 @@
         <section class="mb-16">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Sensor Array</h2>
-                <p class="text-lg text-gray-600">Three critical sensors working together to monitor water quality</p>
+                <p class="text-lg text-gray-600">Four critical sensors working together to monitor water quality</p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- pH Sensor -->
                 <div class="bg-white rounded-2xl shadow-xl border border-green-200 overflow-hidden hover:shadow-2xl transition-shadow">
                     <div class="bg-gradient-to-r from-green-500 to-green-600 p-6 text-white">
@@ -228,6 +228,36 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Dissolved Oxygen Sensor -->
+                <div class="bg-white rounded-2xl shadow-xl border border-blue-200 overflow-hidden hover:shadow-2xl transition-shadow">
+                    <div class="bg-gradient-to-r from-blue-500 to-blue-600 p-6 text-white">
+                        <h3 class="text-2xl font-extrabold flex items-center gap-3">
+                            <span class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            </span>
+                            Dissolved Oxygen
+                        </h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Measures oxygen concentration in water, critical for detecting hypoxic conditions caused by eutrophication and algal blooms.
+                        </p>
+                        <div class="bg-blue-50 rounded-lg p-4 border border-blue-100 mb-4">
+                            <h4 class="font-bold text-gray-900 mb-2 text-sm">Specifications</h4>
+                            <ul class="space-y-1 text-sm text-gray-700">
+                                <li><strong>Range:</strong> 0-20 mg/L</li>
+                                <li><strong>Accuracy:</strong> ±0.2 mg/L</li>
+                                <li><strong>Type:</strong> Optical luminescence</li>
+                                <li><strong>Response:</strong> < 60 seconds</li>
+                                <li><strong>Interface:</strong> Analog output</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-500">
+                            <strong>Why it matters:</strong> Low dissolved oxygen levels indicate dead zones where aquatic life cannot survive, a key symptom of eutrophication.
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -314,37 +344,6 @@
             </div>
         </section>
 
-        <!-- Additional Sensors -->
-        <section class="mb-16">
-            <div class="text-center mb-12">
-                <h2 class="text-blue-600 font-bold text-sm uppercase tracking-widest mb-3">Extended Monitoring</h2>
-                <h3 class="text-3xl font-extrabold text-gray-900 mb-4">Dissolved Oxygen Sensor</h3>
-                <p class="text-lg text-gray-600">Enhanced monitoring capability for detecting hypoxic conditions</p>
-            </div>
-            
-            <div class="max-w-md mx-auto">
-                <!-- Dissolved Oxygen Sensor -->
-                <div class="bg-white rounded-2xl shadow-xl p-6 border border-blue-200 hover:shadow-2xl transition-shadow">
-                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4 mx-auto">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                    </div>
-                    <h4 class="text-lg font-bold text-gray-900 mb-3 text-center">Dissolved Oxygen (DO)</h4>
-                    <p class="text-sm text-gray-700 leading-relaxed mb-3 text-center">
-                        Measures oxygen concentration in water, critical for detecting hypoxic conditions caused by eutrophication.
-                    </p>
-                    <div class="bg-blue-50 rounded-lg p-3 border border-blue-100">
-                        <ul class="space-y-1 text-xs text-gray-700">
-                            <li><strong>Range:</strong> 0-20 mg/L</li>
-                            <li><strong>Accuracy:</strong> ±0.2 mg/L</li>
-                            <li><strong>Type:</strong> Optical luminescence</li>
-                            <li><strong>Response:</strong> < 60 seconds</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
         <!-- Machine Learning Integration -->
         <section class="mb-16">
             <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 lg:p-12 border border-purple-200 shadow-xl">
@@ -369,7 +368,7 @@
                                 <ul class="space-y-1 text-sm text-gray-700">
                                     <li><strong>Algorithm:</strong> Gradient Boosting Regressor</li>
                                     <li><strong>Target Accuracy:</strong> R² > 0.90</li>
-                                    <li><strong>Input Features:</strong> pH, Temperature, Turbidity</li>
+                                    <li><strong>Input Features:</strong> pH, Temperature, Turbidity, Dissolved Oxygen</li>
                                     <li><strong>Output:</strong> Chlorophyll-a concentration prediction</li>
                                 </ul>
                             </div>
@@ -386,7 +385,7 @@
                                 <div class="w-8 h-8 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center font-bold flex-shrink-0 text-sm">1</div>
                                 <div>
                                     <h5 class="font-bold text-gray-900 text-sm">Real-time Sensor Data Collection</h5>
-                                    <p class="text-xs text-gray-600">Arduino collects pH, temperature, and turbidity readings every minute</p>
+                                    <p class="text-xs text-gray-600">Arduino collects pH, temperature, turbidity, and dissolved oxygen readings every minute</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-3">
