@@ -1,0 +1,20 @@
+# Redirect root to index page
+/ /pages/index.html 200
+
+# Redirect page requests (without .html extension)
+/index /pages/index.html 200
+/about /pages/about.html 200
+/hardware /pages/hardware.html 200
+/business /pages/business.html 200
+/team /pages/team.html 200
+
+# Redirect page requests (with .html extension)
+/index.html /pages/index.html 200
+/about.html /pages/about.html 200
+/hardware.html /pages/hardware.html 200
+/business.html /pages/business.html 200
+/team.html /pages/team.html 200
+
+# Serve static files (no redirect needed, but included for clarity)
+/static/* /static/:splat 200
+
