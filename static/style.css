@@ -41,12 +41,28 @@ button:focus-visible {
     outline-offset: 2px;
 }
 
-/* Custom gradient text effect (if needed) */
+/* Custom gradient text effect */
 .gradient-text {
     background: linear-gradient(135deg, #06b6d4 0%, #16a34a 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+/* --- NEW: Hero Background Filter --- */
+/* This applies the blue/teal overlay to fix the "ugly" water look */
+.hero-bg {
+    background-image: 
+        linear-gradient(
+            to bottom right, 
+            rgba(15, 23, 42, 0.85),  /* Dark Slate/Navy (Top Left) */
+            rgba(6, 182, 212, 0.75)  /* Cyan/Teal (Bottom Right) */
+        ),
+        url('/static/img/homepageBackground.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional: Creates a parallax effect */
 }
 
 /* Animation for fade-in effects */
@@ -73,4 +89,3 @@ button:focus-visible {
         display: none;
     }
 }
-
