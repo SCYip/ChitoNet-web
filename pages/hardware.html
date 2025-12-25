@@ -342,6 +342,472 @@
             </div>
         </section>
 
+        <!-- Sensors Section -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Sensor Array</h2>
+                <p class="text-lg text-gray-600">Four critical sensors working together to monitor water quality</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- pH Sensor -->
+                <div class="bg-white rounded-2xl shadow-xl border border-green-200 overflow-hidden hover:shadow-2xl transition-shadow">
+                    <div class="bg-gradient-to-r from-green-500 to-green-600 p-6 text-white">
+                        <h3 class="text-2xl font-extrabold flex items-center gap-3">
+                            <span class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                            </span>
+                            pH Sensor
+                        </h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Measures the acidity or alkalinity of water on a scale from 0 to 14. Critical for detecting chemical imbalances that can lead to eutrophication.
+                        </p>
+                        <div class="bg-green-50 rounded-lg p-4 border border-green-100 mb-4">
+                            <h4 class="font-bold text-gray-900 mb-2 text-sm">Specifications</h4>
+                            <ul class="space-y-1 text-sm text-gray-700">
+                                <li><strong>Range:</strong> 0-14 pH</li>
+                                <li><strong>Accuracy:</strong> ±0.1 pH</li>
+                                <li><strong>Response Time:</strong> < 1 minute</li>
+                                <li><strong>Interface:</strong> Analog output</li>
+                                <li><strong>Operating Temp:</strong> 0-60°C</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-500">
+                            <strong>Why it matters:</strong> Algal blooms often cause pH fluctuations. Monitoring pH helps detect early signs of eutrophication.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Temperature Sensor -->
+                <div class="bg-white rounded-2xl shadow-xl border border-red-200 overflow-hidden hover:shadow-2xl transition-shadow">
+                    <div class="bg-gradient-to-r from-red-500 to-red-600 p-6 text-white">
+                        <h3 class="text-2xl font-extrabold flex items-center gap-3">
+                            <span class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            </span>
+                            DS18B20 Temperature
+                        </h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Waterproof digital temperature sensor that provides accurate water temperature readings. Temperature changes can accelerate nutrient absorption and algal growth.
+                        </p>
+                        <div class="bg-red-50 rounded-lg p-4 border border-red-100 mb-4">
+                            <h4 class="font-bold text-gray-900 mb-2 text-sm">Specifications</h4>
+                            <ul class="space-y-1 text-sm text-gray-700">
+                                <li><strong>Range:</strong> -55°C to +125°C</li>
+                                <li><strong>Accuracy:</strong> ±0.5°C</li>
+                                <li><strong>Resolution:</strong> 9-12 bit selectable</li>
+                                <li><strong>Interface:</strong> One-Wire digital</li>
+                                <li><strong>Waterproof:</strong> IP68 rated</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-500">
+                            <strong>Why it matters:</strong> Warmer water promotes faster nutrient absorption and can accelerate algal bloom formation.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Turbidity Sensor -->
+                <div class="bg-white rounded-2xl shadow-xl border border-yellow-200 overflow-hidden hover:shadow-2xl transition-shadow">
+                    <div class="bg-gradient-to-r from-yellow-500 to-yellow-600 p-6 text-white">
+                        <h3 class="text-2xl font-extrabold flex items-center gap-3">
+                            <span class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0zM2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                            </span>
+                            Turbidity Sensor
+                        </h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Optical sensor that measures suspended particles and water clarity in NTU (Nephelometric Turbidity Units). High turbidity indicates sediment, algae, or organic matter.
+                        </p>
+                        <div class="bg-yellow-50 rounded-lg p-4 border border-yellow-100 mb-4">
+                            <h4 class="font-bold text-gray-900 mb-2 text-sm">Specifications</h4>
+                            <ul class="space-y-1 text-sm text-gray-700">
+                                <li><strong>Range:</strong> 0-1000 NTU</li>
+                                <li><strong>Accuracy:</strong> ±5%</li>
+                                <li><strong>Method:</strong> Optical nephelometry</li>
+                                <li><strong>Interface:</strong> Analog output</li>
+                                <li><strong>Response Time:</strong> < 500ms</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-500">
+                            <strong>Why it matters:</strong> Direct indicator of water quality degradation and presence of suspended particles that can contribute to eutrophication.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dissolved Oxygen Sensor -->
+                <div class="bg-white rounded-2xl shadow-xl border border-blue-200 overflow-hidden hover:shadow-2xl transition-shadow">
+                    <div class="bg-gradient-to-r from-blue-500 to-blue-600 p-6 text-white">
+                        <h3 class="text-2xl font-extrabold flex items-center gap-3">
+                            <span class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            </span>
+                            Dissolved Oxygen
+                        </h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Measures oxygen concentration in water, critical for detecting hypoxic conditions caused by eutrophication and algal blooms.
+                        </p>
+                        <div class="bg-blue-50 rounded-lg p-4 border border-blue-100 mb-4">
+                            <h4 class="font-bold text-gray-900 mb-2 text-sm">Specifications</h4>
+                            <ul class="space-y-1 text-sm text-gray-700">
+                                <li><strong>Range:</strong> 0-20 mg/L</li>
+                                <li><strong>Accuracy:</strong> ±0.2 mg/L</li>
+                                <li><strong>Type:</strong> Optical luminescence</li>
+                                <li><strong>Response:</strong> < 60 seconds</li>
+                                <li><strong>Interface:</strong> Analog output</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-500">
+                            <strong>Why it matters:</strong> Low dissolved oxygen levels indicate dead zones where aquatic life cannot survive, a key symptom of eutrophication.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chitosan Treatment System -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 lg:p-12 border border-emerald-200 shadow-xl">
+                <div class="text-center mb-8">
+                    <h2 class="text-emerald-600 font-bold text-sm uppercase tracking-widest mb-3">Treatment System</h2>
+                    <h3 class="text-3xl font-extrabold text-gray-900 mb-4">Chitosan Aerator & Dispenser</h3>
+                    <p class="text-lg text-gray-600">Automated treatment system for preventing and controlling algal blooms</p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl p-6 shadow-lg border border-emerald-100">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <span class="text-2xl">💧</span>
+                            Chitosan Dispenser Module
+                        </h4>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            The chitosan dispenser is a controlled-release system that automatically deploys chitosan solution when eutrophication risk is detected. Chitosan is a natural biopolymer derived from chitin that effectively flocculates algae and suspended particles.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="bg-emerald-50 rounded-lg p-4 border border-emerald-100">
+                                <h5 class="font-bold text-gray-900 mb-2 text-sm">Key Features</h5>
+                                <ul class="space-y-1 text-sm text-gray-700">
+                                    <li><strong>Capacity:</strong> 5L reservoir for extended operation</li>
+                                    <li><strong>Dosing:</strong> Programmable release rate (10-500 mL/hr)</li>
+                                    <li><strong>Control:</strong> Automated via Arduino based on ML predictions</li>
+                                    <li><strong>Material:</strong> Food-grade chitosan (85% deacetylation)</li>
+                                    <li><strong>Effectiveness:</strong> Removes 70-90% of algae within 24 hours</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg border border-teal-100">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <span class="text-2xl">🌀</span>
+                            Micro-Aerator System
+                        </h4>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Integrated micro-aerator improves chitosan dispersion and increases dissolved oxygen levels in water, creating unfavorable conditions for algal growth while supporting aquatic life.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="bg-teal-50 rounded-lg p-4 border border-teal-100">
+                                <h5 class="font-bold text-gray-900 mb-2 text-sm">Specifications</h5>
+                                <ul class="space-y-1 text-sm text-gray-700">
+                                    <li><strong>Type:</strong> Submersible micro-bubble aerator</li>
+                                    <li><strong>Air Flow:</strong> 2-5 L/min adjustable</li>
+                                    <li><strong>Power:</strong> 5W DC pump (solar compatible)</li>
+                                    <li><strong>Bubble Size:</strong> 0.5-2mm for optimal oxygen transfer</li>
+                                    <li><strong>Operation:</strong> Intermittent or continuous mode</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-white rounded-xl p-6 border border-emerald-200 shadow-lg">
+                    <h4 class="text-lg font-bold text-gray-900 mb-4 text-center">How It Works</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-3 font-bold">1</div>
+                            <h5 class="font-bold text-gray-900 mb-1 text-sm">Detection</h5>
+                            <p class="text-xs text-gray-600">ML model predicts high eutrophication risk</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3 font-bold">2</div>
+                            <h5 class="font-bold text-gray-900 mb-1 text-sm">Activation</h5>
+                            <p class="text-xs text-gray-600">Arduino triggers dispenser and aerator</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-3 font-bold">3</div>
+                            <h5 class="font-bold text-gray-900 mb-1 text-sm">Treatment</h5>
+                            <p class="text-xs text-gray-600">Chitosan flocculates algae while aerator adds oxygen</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3 font-bold">4</div>
+                            <h5 class="font-bold text-gray-900 mb-1 text-sm">Monitoring</h5>
+                            <p class="text-xs text-gray-600">Sensors track water quality improvement</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Machine Learning Integration -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 lg:p-12 border border-purple-200 shadow-xl">
+                <div class="text-center mb-8">
+                    <h2 class="text-blue-600 font-bold text-sm uppercase tracking-widest mb-3">Intelligent Analytics</h2>
+                    <h3 class="text-3xl font-extrabold text-gray-900 mb-4">Machine Learning Prediction System</h3>
+                    <p class="text-lg text-gray-600">Advanced AI-powered eutrophication risk prediction using Gradient Boosting algorithms</p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl p-6 shadow-lg border border-purple-100">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <span class="text-2xl">🧠</span>
+                            Predictive Model
+                        </h4>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            ChitoNet employs a sophisticated <strong>Gradient Boosting machine learning model</strong> trained on high-quality environmental datasets to predict chlorophyll-a levels—the primary indicator of eutrophication risk.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="bg-purple-50 rounded-lg p-4 border border-purple-100">
+                                <h5 class="font-bold text-gray-900 mb-2 text-sm">Model Performance</h5>
+                                <ul class="space-y-1 text-sm text-gray-700">
+                                    <li><strong>Algorithm:</strong> Gradient Boosting Regressor</li>
+                                    <li><strong>Target Accuracy:</strong> R² > 0.90</li>
+                                    <li><strong>Input Features:</strong> pH, Temperature, Turbidity, Dissolved Oxygen</li>
+                                    <li><strong>Output:</strong> Chlorophyll-a concentration prediction</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg border border-pink-100">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <span class="text-2xl">📊</span>
+                            Data Processing Pipeline
+                        </h4>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center font-bold flex-shrink-0 text-sm">1</div>
+                                <div>
+                                    <h5 class="font-bold text-gray-900 text-sm">Real-time Sensor Data Collection</h5>
+                                    <p class="text-xs text-gray-600">Arduino collects pH, temperature, turbidity, and dissolved oxygen readings every minute</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 bg-pink-100 text-pink-600 rounded-lg flex items-center justify-center font-bold flex-shrink-0 text-sm">2</div>
+                                <div>
+                                    <h5 class="font-bold text-gray-900 text-sm">Cloud Transmission</h5>
+                                    <p class="text-xs text-gray-600">Data sent to ThingSpeak platform via WiFi for storage and processing</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center font-bold flex-shrink-0 text-sm">3</div>
+                                <div>
+                                    <h5 class="font-bold text-gray-900 text-sm">ML Model Inference</h5>
+                                    <p class="text-xs text-gray-600">Gradient Boosting model predicts chlorophyll-a levels and eutrophication risk</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 bg-pink-100 text-pink-600 rounded-lg flex items-center justify-center font-bold flex-shrink-0 text-sm">4</div>
+                                <div>
+                                    <h5 class="font-bold text-gray-900 text-sm">Alert & Visualization</h5>
+                                    <p class="text-xs text-gray-600">Dashboard displays predictions and triggers alerts when thresholds are exceeded</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-white rounded-xl p-6 border border-purple-200 shadow-lg">
+                    <h4 class="text-lg font-bold text-gray-900 mb-4 text-center">Scientific Foundation</h4>
+                    <p class="text-gray-700 leading-relaxed text-center">
+                        Our model is trained on validated environmental datasets from authoritative sources including <strong>USGS</strong>, <strong>EPA</strong>, <strong>EDI</strong>, and <strong>LTER</strong> monitoring sites. The system continuously learns from new data to improve prediction accuracy and adapt to local water conditions.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Architecture -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-br from-blue-50 to-green-50 rounded-2xl p-8 lg:p-12 border border-blue-200 shadow-xl">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-6 text-center">System Architecture</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Buoy Deployment</h3>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            Each Chito<span class="text-green-500">Net</span> buoy is a self-contained monitoring unit designed for long-term deployment in aquatic environments. The buoys are strategically positioned across large water areas, forming a comprehensive monitoring network.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="bg-white rounded-xl p-4 border border-blue-100 shadow-md">
+                                <h4 class="font-bold text-gray-900 mb-2 flex items-center gap-2">
+                                    <span class="text-blue-600">🔋</span>
+                                    Power System
+                                </h4>
+                                <p class="text-sm text-gray-600">Solar-powered with battery backup for 24/7 operation. Designed for extended deployment periods.</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-4 border border-green-100 shadow-md">
+                                <h4 class="font-bold text-gray-900 mb-2 flex items-center gap-2">
+                                    <span class="text-green-600">📡</span>
+                                    Data Transmission
+                                </h4>
+                                <p class="text-sm text-gray-600">WiFi connectivity enables real-time data transmission to ThingSpeak cloud platform for analysis and monitoring.</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-4 border border-yellow-100 shadow-md">
+                                <h4 class="font-bold text-gray-900 mb-2 flex items-center gap-2">
+                                    <span class="text-yellow-600">🌊</span>
+                                    Waterproof Housing
+                                </h4>
+                                <p class="text-sm text-gray-600">IP68-rated enclosure protects all electronics from water, ensuring reliable operation in harsh aquatic environments.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Data Flow</h3>
+                        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-md">
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold flex-shrink-0">1</div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">Sensor Data Collection</h4>
+                                        <p class="text-sm text-gray-600">Arduino reads data from pH, temperature, and turbidity sensors</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center font-bold flex-shrink-0">2</div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">Data Processing</h4>
+                                        <p class="text-sm text-gray-600">Arduino processes and formats sensor readings</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 bg-yellow-100 text-yellow-600 rounded-lg flex items-center justify-center font-bold flex-shrink-0">3</div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">WiFi Transmission</h4>
+                                        <p class="text-sm text-gray-600">Data sent wirelessly to ThingSpeak cloud platform</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center font-bold flex-shrink-0">4</div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">Cloud Storage & Analysis</h4>
+                                        <p class="text-sm text-gray-600">Data stored and analyzed in real-time on ThingSpeak</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 bg-red-100 text-red-600 rounded-lg flex items-center justify-center font-bold flex-shrink-0">5</div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">Dashboard Display</h4>
+                                        <p class="text-sm text-gray-600">Users access real-time data through ChitoNet web dashboard</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wiring & Connections -->
+        <section class="mb-16">
+            <div class="bg-white rounded-2xl shadow-xl border border-gray-200 p-8">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Wiring & Connections</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Sensor Connections</h3>
+                        <div class="space-y-3">
+                            <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                                <h4 class="font-bold text-gray-900 mb-2">pH Sensor</h4>
+                                <ul class="text-sm text-gray-700 space-y-1">
+                                    <li><strong>VCC:</strong> 5V</li>
+                                    <li><strong>GND:</strong> GND</li>
+                                    <li><strong>Signal:</strong> Analog Pin A0</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                                <h4 class="font-bold text-gray-900 mb-2">DS18B20 Temperature</h4>
+                                <ul class="text-sm text-gray-700 space-y-1">
+                                    <li><strong>VCC:</strong> 5V</li>
+                                    <li><strong>GND:</strong> GND</li>
+                                    <li><strong>Data:</strong> Digital Pin 2 (with 4.7kΩ pull-up resistor)</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                                <h4 class="font-bold text-gray-900 mb-2">Turbidity Sensor</h4>
+                                <ul class="text-sm text-gray-700 space-y-1">
+                                    <li><strong>VCC:</strong> 5V</li>
+                                    <li><strong>GND:</strong> GND</li>
+                                    <li><strong>Signal:</strong> Analog Pin A1</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Power Requirements</h3>
+                        <div class="bg-blue-50 rounded-xl p-6 border border-blue-200">
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-blue-600 font-bold mt-1">⚡</span>
+                                    <div>
+                                        <strong>Operating Voltage:</strong> 5V DC
+                                        <p class="text-sm text-gray-600">Supplied via USB or external power adapter</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-blue-600 font-bold mt-1">🔋</span>
+                                    <div>
+                                        <strong>Power Consumption:</strong> ~150-200mA (active)
+                                        <p class="text-sm text-gray-600">Optimized for battery-powered applications</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-blue-600 font-bold mt-1">☀️</span>
+                                    <div>
+                                        <strong>Solar Power:</strong> Recommended for long-term deployment
+                                        <p class="text-sm text-gray-600">5W solar panel with charge controller</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Network Deployment -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-br from-slate-900 to-blue-900 text-white rounded-2xl p-8 lg:p-12 shadow-2xl relative overflow-hidden">
+                <div class="absolute inset-0 z-0">
+                    <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-white/5 rounded-full blur-3xl opacity-30"></div>
+                </div>
+                <div class="relative z-10">
+                    <h2 class="text-3xl font-extrabold mb-6 text-center">Network Deployment Strategy</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                            <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4 text-2xl">📍</div>
+                            <h3 class="text-xl font-bold mb-3">Strategic Placement</h3>
+                            <p class="text-blue-100 text-sm">Buoys are positioned across large water areas to provide comprehensive coverage and detect localized issues.</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                            <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4 text-2xl">🔄</div>
+                            <h3 class="text-xl font-bold mb-3">Continuous Monitoring</h3>
+                            <p class="text-blue-100 text-sm">24/7 data collection ensures early detection of water quality changes before they become critical.</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                            <div class="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center mb-4 text-2xl">🌐</div>
+                            <h3 class="text-xl font-bold mb-3">Network Coverage</h3>
+                            <p class="text-blue-100 text-sm">Multiple buoys work together, providing spatial data about water quality variations across different zones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
