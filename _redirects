@@ -6,6 +6,8 @@
 /about /pages/about.html 200
 /hardware /pages/hardware.html 200
 /business /pages/business.html 200
+/model /pages/model.html 200
+/download /pages/download.html 200
 /team /pages/team.html 200
 
 # Redirect page requests (with .html extension)
@@ -13,6 +15,8 @@
 /about.html /pages/about.html 200
 /hardware.html /pages/hardware.html 200
 /business.html /pages/business.html 200
+/model.html /pages/model.html 200
+/download.html /pages/download.html 200
 /team.html /pages/team.html 200
 
 # Serve static files (no redirect needed, but included for clarity)
