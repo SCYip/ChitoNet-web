@@ -73,11 +73,11 @@
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
                             Microcontroller
                         </div>
-                        <h3 class="text-4xl font-extrabold text-slate-900 mb-2">ESP32-DevKitC V4</h3>
-                        <p class="text-sm text-slate-500 font-semibold">ESP32-WROOM-32D Module</p>
+                        <h3 class="text-4xl font-extrabold text-slate-900 mb-2">ESP-WROOM-32</h3>
+                        <p class="text-sm text-slate-500 font-semibold">CH340 USB-to-Serial Driver</p>
                     </div>
                     <p class="text-slate-600 text-lg leading-relaxed">
-                        We transitioned from Arduino to the ESP32-WROOM-32D to handle complex real-time telemetry. Its dual-core architecture allows us to read sensors on one core while maintaining a stable Wi-Fi connection on the other.
+                        We transitioned from Arduino to the ESP-WROOM-32 to handle complex real-time telemetry. Its dual-core architecture allows us to read sensors on one core while maintaining a stable 4G data connection on the other. The onboard CH340 chip provides reliable USB-to-serial communication for programming and debugging.
                     </p>
                     <div class="grid grid-cols-2 gap-4 pt-4">
                         <div class="p-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200 hover:shadow-lg transition-all group">
@@ -86,7 +86,7 @@
                         </div>
                         <div class="p-4 bg-gradient-to-br from-green-50 to-green-100 rounded-xl border border-green-200 hover:shadow-lg transition-all group">
                             <div class="text-green-600 text-xs font-bold uppercase mb-1">Connectivity</div>
-                            <div class="text-2xl font-bold text-slate-800 group-hover:text-green-600">WiFi/BT</div>
+                            <div class="text-2xl font-bold text-slate-800 group-hover:text-green-600">4G</div>
                         </div>
                         <div class="p-4 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl border border-purple-200 hover:shadow-lg transition-all group">
                             <div class="text-purple-600 text-xs font-bold uppercase mb-1">Clock Speed</div>
@@ -123,14 +123,14 @@
                                     <span class="text-white">Temp (1-Wire)</span>
                                 </div>
                                 <div class="flex items-center justify-between text-slate-300 hover:bg-white/5 p-2 rounded transition">
-                                    <span class="text-purple-400">GPIO 16/17</span>
-                                    <span>───</span>
-                                    <span class="text-white">RS485 (RX/TX)</span>
+                                    <span class="text-cyan-400">GPIO 32</span>
+                                    <span>──────</span>
+                                    <span class="text-white">DO Sensor (Input)</span>
                                 </div>
                                 <div class="flex items-center justify-between text-slate-300 hover:bg-white/5 p-2 rounded transition">
                                     <span class="text-yellow-400">GPIO 12/14</span>
                                     <span>───</span>
-                                    <span class="text-white">Relays (Out)</span>
+                                    <span class="text-white">Relays (Actuator/Aerator)</span>
                                 </div>
                             </div>
                         </div>
@@ -160,7 +160,7 @@
                     <tbody class="divide-y divide-slate-100 text-sm text-slate-700">
                         <tr class="hover:bg-blue-50/50 transition group">
                             <td class="p-4 font-semibold text-slate-900 group-hover:text-blue-600">ESP32 Dev Board</td>
-                            <td class="p-4 font-mono text-xs bg-slate-50 rounded">ESP32-WROOM-32D</td>
+                            <td class="p-4 font-mono text-xs bg-slate-50 rounded">ESP-WROOM-32 (CH340)</td>
                             <td class="p-4 font-bold text-blue-600">1</td>
                             <td class="p-4">Main Controller</td>
                         </tr>
@@ -184,27 +184,51 @@
                         </tr>
                         <tr class="hover:bg-cyan-50/50 transition group">
                             <td class="p-4 font-semibold text-slate-900 group-hover:text-cyan-600">DO Sensor</td>
-                            <td class="p-4 font-mono text-xs bg-slate-50 rounded">RS485 Industrial</td>
+                            <td class="p-4 font-mono text-xs bg-slate-50 rounded">Analog Output</td>
                             <td class="p-4 font-bold text-cyan-600">1</td>
                             <td class="p-4">Dissolved Oxygen</td>
                         </tr>
-                        <tr class="hover:bg-purple-50/50 transition group">
-                            <td class="p-4 font-semibold text-slate-900 group-hover:text-purple-600">RS485 Interface</td>
-                            <td class="p-4 font-mono text-xs bg-slate-50 rounded">MAX485 / TTL</td>
-                            <td class="p-4 font-bold text-purple-600">1</td>
-                            <td class="p-4">DO Communication</td>
-                        </tr>
+
                         <tr class="hover:bg-orange-50/50 transition group">
                             <td class="p-4 font-semibold text-slate-900 group-hover:text-orange-600">Relay Module</td>
-                            <td class="p-4 font-mono text-xs bg-slate-50 rounded">5V / 10A</td>
+                            <td class="p-4 font-mono text-xs bg-slate-50 rounded">24V / 10A</td>
                             <td class="p-4 font-bold text-orange-600">2</td>
-                            <td class="p-4">Switch Pumps/Air</td>
+                            <td class="p-4">Drive Actuator/Aerator</td>
                         </tr>
                         <tr class="hover:bg-pink-50/50 transition group">
-                            <td class="p-4 font-semibold text-slate-900 group-hover:text-pink-600">Peristaltic Pump</td>
-                            <td class="p-4 font-mono text-xs bg-slate-50 rounded">12V DC</td>
+                            <td class="p-4 font-semibold text-slate-900 group-hover:text-pink-600">Linear Actuator</td>
+                            <td class="p-4 font-mono text-xs bg-slate-50 rounded">24V DC</td>
                             <td class="p-4 font-bold text-pink-600">1</td>
-                            <td class="p-4">Water Sampling</td>
+                            <td class="p-4">Chitosan Packet Deployment</td>
+                        </tr>
+                        <tr class="hover:bg-indigo-50/50 transition group">
+                            <td class="p-4 font-semibold text-slate-900 group-hover:text-indigo-600">Battery Pack</td>
+                            <td class="p-4 font-mono text-xs bg-slate-50 rounded">24V Rechargeable</td>
+                            <td class="p-4 font-bold text-indigo-600">1</td>
+                            <td class="p-4">Main Power Supply</td>
+                        </tr>
+                        <tr class="bg-emerald-50/30 hover:bg-emerald-50/60 transition group">
+                            <td class="p-4 font-semibold text-slate-900 group-hover:text-emerald-600" colspan="4">
+                                <span class="text-xs uppercase tracking-wider text-emerald-600 font-bold">Consumables</span>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-emerald-50/50 transition group">
+                            <td class="p-4 font-semibold text-slate-900 group-hover:text-emerald-600">Chitosan Powder</td>
+                            <td class="p-4 font-mono text-xs bg-slate-50 rounded">85% Deacetylation</td>
+                            <td class="p-4 font-bold text-emerald-600">—</td>
+                            <td class="p-4">Active Treatment Agent</td>
+                        </tr>
+                        <tr class="hover:bg-emerald-50/50 transition group">
+                            <td class="p-4 font-semibold text-slate-900 group-hover:text-emerald-600">Bentonite Clay</td>
+                            <td class="p-4 font-mono text-xs bg-slate-50 rounded">Natural Clay</td>
+                            <td class="p-4 font-bold text-emerald-600">—</td>
+                            <td class="p-4">Binding & Sinking Agent</td>
+                        </tr>
+                        <tr class="hover:bg-emerald-50/50 transition group">
+                            <td class="p-4 font-semibold text-slate-900 group-hover:text-emerald-600">Wafer Paper</td>
+                            <td class="p-4 font-mono text-xs bg-slate-50 rounded">Water-Soluble</td>
+                            <td class="p-4 font-bold text-emerald-600">—</td>
+                            <td class="p-4">Packet Wrapping</td>
                         </tr>
                     </tbody>
                 </table>
@@ -224,7 +248,7 @@
                     
                     <div class="bg-white/10 rounded-lg p-4 backdrop-blur-sm space-y-3">
                         <div class="flex justify-between items-center text-sm">
-                            <span class="text-slate-300">ESP32 (Wifi Active)</span>
+                            <span class="text-slate-300">ESP32 (4G Active)</span>
                             <span class="font-mono text-yellow-300">~240 mA</span>
                         </div>
                         <div class="flex justify-between items-center text-sm">
@@ -242,10 +266,7 @@
                         </div>
                     </div>
                     
-                    <div class="mt-4 flex gap-3 text-xs bg-black/20 p-3 rounded-lg border border-yellow-500/30 text-yellow-100">
-                        <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-                        <p><strong>Warning:</strong> Do not power high-current devices (motors/solenoids) from the 3.3V pin. Use an external 12V battery with a common ground.</p>
-                    </div>
+
                 </div>
             </div>
 
@@ -265,15 +286,15 @@
                     <li class="flex items-start gap-3">
                         <div class="mt-1 w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs font-bold flex-shrink-0">2</div>
                         <div>
-                            <span class="font-bold text-slate-900 block">Voltage Divider Warning</span>
-                            <span class="text-sm text-slate-600">The ESP32 is a <strong class="text-red-500">3.3V device</strong>. Ensure pull-up resistors (like the 4.7kΩ for Temp) go to 3V3, NOT 5V.</span>
+                            <span class="font-bold text-slate-900 block">Voltage Extension Board</span>
+                            <span class="text-sm text-slate-600">An extension board handles voltage level shifting between the <strong class="text-red-500">3.3V ESP32</strong> and the 24V actuator/aerator system — no external resistors needed.</span>
                         </div>
                     </li>
                     <li class="flex items-start gap-3">
                         <div class="mt-1 w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs font-bold flex-shrink-0">3</div>
                         <div>
                             <span class="font-bold text-slate-900 block">Sensor Partitioning</span>
-                            <span class="text-sm text-slate-600">Keep analog sensors (pH, Turbidity) on the left side of the board and digital/noisy components (Relays) on the far right.</span>
+                            <span class="text-sm text-slate-600">Keep analog sensors (pH, Turbidity, DO) on the left side of the board and digital/noisy components (Relays) on the far right.</span>
                         </div>
                     </li>
                 </ul>
@@ -302,21 +323,27 @@
                         <tbody class="divide-y divide-slate-100 text-sm">
                             <tr class="group hover:bg-blue-50/30 transition">
                                 <td class="p-4 font-mono font-bold text-blue-600">3V3</td>
-                                <td class="p-4 font-medium text-slate-900">All Sensors VCC</td>
+                                <td class="p-4 font-medium text-slate-900">DS18B20 Temp VCC</td>
                                 <td class="p-4 text-red-500 font-bold">Red</td>
-                                <td class="p-4 text-slate-500">Main power rail</td>
+                                <td class="p-4 text-slate-500">3.3V power (temp sensor only)</td>
+                            </tr>
+                            <tr class="group hover:bg-blue-50/30 transition">
+                                <td class="p-4 font-mono font-bold text-blue-600">5V (VIN)</td>
+                                <td class="p-4 font-medium text-slate-900">pH / Turbidity / DO VCC</td>
+                                <td class="p-4 text-red-500 font-bold">Red</td>
+                                <td class="p-4 text-slate-500">5V power via extension board</td>
                             </tr>
                             <tr class="group hover:bg-blue-50/30 transition">
                                 <td class="p-4 font-mono font-bold text-slate-700">GND</td>
                                 <td class="p-4 font-medium text-slate-900">Common Ground</td>
                                 <td class="p-4 text-slate-900 font-bold">Black</td>
-                                <td class="p-4 text-slate-500">Must connect battery (-) here</td>
+                                <td class="p-4 text-slate-500">Must connect 24V battery (-) here too</td>
                             </tr>
                             <tr class="group hover:bg-blue-50/30 transition">
                                 <td class="p-4 font-mono font-bold text-purple-600">GPIO 15</td>
                                 <td class="p-4 font-medium text-slate-900">DS18B20 Temp</td>
                                 <td class="p-4 text-yellow-500 font-bold">Yellow</td>
-                                <td class="p-4 text-slate-500">Needs 4.7kΩ pull-up to 3V3</td>
+                                <td class="p-4 text-slate-500">Digital 1-Wire (via extension board)</td>
                             </tr>
                             <tr class="group hover:bg-blue-50/30 transition">
                                 <td class="p-4 font-mono font-bold text-purple-600">GPIO 34</td>
@@ -331,10 +358,10 @@
                                 <td class="p-4 text-slate-500">Analog Input Only</td>
                             </tr>
                             <tr class="group hover:bg-blue-50/30 transition">
-                                <td class="p-4 font-mono font-bold text-purple-600">GPIO 16/17</td>
-                                <td class="p-4 font-medium text-slate-900">MAX485 (DO)</td>
-                                <td class="p-4 text-green-500 font-bold">Grn/Wht</td>
-                                <td class="p-4 text-slate-500">RX=16, TX=17</td>
+                                <td class="p-4 font-mono font-bold text-purple-600">GPIO 32</td>
+                                <td class="p-4 font-medium text-slate-900">DO Sensor OUT</td>
+                                <td class="p-4 text-cyan-500 font-bold">Cyan</td>
+                                <td class="p-4 text-slate-500">Analog Input Only</td>
                             </tr>
                         </tbody>
                     </table>
@@ -459,7 +486,7 @@
                             <ul class="space-y-1 text-sm text-gray-700">
                                 <li><strong>Range:</strong> 0-20 mg/L</li>
                                 <li><strong>Accuracy:</strong> ±0.2 mg/L</li>
-                                <li><strong>Type:</strong> Optical luminescence</li>
+                                <li><strong>Type:</strong> Electrochemical galvanic cell</li>
                                 <li><strong>Response:</strong> < 60 seconds</li>
                                 <li><strong>Interface:</strong> Analog output</li>
                             </ul>
@@ -485,19 +512,19 @@
                     <div class="bg-white rounded-xl p-6 shadow-lg border border-emerald-100">
                         <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
                             <span class="text-2xl">💧</span>
-                            Chitosan Dispenser Module
+                            Chitosan Packet Launcher
                         </h4>
                         <p class="text-gray-700 leading-relaxed mb-4">
-                            The chitosan dispenser is a controlled-release system that automatically deploys chitosan solution when eutrophication risk is detected. Chitosan is a natural biopolymer derived from chitin that effectively flocculates algae and suspended particles.
+                            Chitosan powder is mixed with <strong>bentonite clay</strong> and wrapped in <strong>water-soluble wafer paper</strong> to form compact, dissolvable packets. A relay-controlled <strong>24V linear actuator</strong> launches these packets into the water when eutrophication risk is detected. Once submerged, the wafer paper dissolves and the chitosan–bentonite mixture disperses to flocculate algae and bind excess nutrients.
                         </p>
                         <div class="space-y-3">
                             <div class="bg-emerald-50 rounded-lg p-4 border border-emerald-100">
                                 <h5 class="font-bold text-gray-900 mb-2 text-sm">Key Features</h5>
                                 <ul class="space-y-1 text-sm text-gray-700">
-                                    <li><strong>Capacity:</strong> 5L reservoir for extended operation</li>
-                                    <li><strong>Dosing:</strong> Programmable release rate (10-500 mL/hr)</li>
-                                    <li><strong>Control:</strong> Automated via Arduino based on ML predictions</li>
-                                    <li><strong>Material:</strong> Food-grade chitosan (85% deacetylation)</li>
+                                    <li><strong>Mechanism:</strong> 24V linear actuator launches pre-made packets</li>
+                                    <li><strong>Wrapping:</strong> Water-soluble wafer paper — dissolves on contact with water</li>
+                                    <li><strong>Payload:</strong> Chitosan (85% deacetylation) + bentonite clay</li>
+                                    <li><strong>Control:</strong> Relay-driven, triggered by ESP32 based on ML predictions</li>
                                     <li><strong>Effectiveness:</strong> Removes 70-90% of algae within 24 hours</li>
                                 </ul>
                             </div>
@@ -518,7 +545,7 @@
                                 <ul class="space-y-1 text-sm text-gray-700">
                                     <li><strong>Type:</strong> Submersible micro-bubble aerator</li>
                                     <li><strong>Air Flow:</strong> 2-5 L/min adjustable</li>
-                                    <li><strong>Power:</strong> 5W DC pump (solar compatible)</li>
+                                    <li><strong>Power:</strong> 24V DC pump (relay-controlled)</li>
                                     <li><strong>Bubble Size:</strong> 0.5-2mm for optimal oxygen transfer</li>
                                     <li><strong>Operation:</strong> Intermittent or continuous mode</li>
                                 </ul>
@@ -538,12 +565,12 @@
                         <div class="text-center">
                             <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3 font-bold">2</div>
                             <h5 class="font-bold text-gray-900 mb-1 text-sm">Activation</h5>
-                            <p class="text-xs text-gray-600">Arduino triggers dispenser and aerator</p>
+                            <p class="text-xs text-gray-600">ESP32 activates relays to drive actuator and aerator</p>
                         </div>
                         <div class="text-center">
                             <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-3 font-bold">3</div>
                             <h5 class="font-bold text-gray-900 mb-1 text-sm">Treatment</h5>
-                            <p class="text-xs text-gray-600">Chitosan flocculates algae while aerator adds oxygen</p>
+                            <p class="text-xs text-gray-600">Wafer paper dissolves, chitosan–bentonite flocculates algae; aerator adds oxygen</p>
                         </div>
                         <div class="text-center">
                             <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3 font-bold">4</div>
@@ -596,14 +623,14 @@
                                 <div class="w-8 h-8 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center font-bold flex-shrink-0 text-sm">1</div>
                                 <div>
                                     <h5 class="font-bold text-gray-900 text-sm">Real-time Sensor Data Collection</h5>
-                                    <p class="text-xs text-gray-600">Arduino collects pH, temperature, turbidity, and dissolved oxygen readings every minute</p>
+                                    <p class="text-xs text-gray-600">ESP32 collects pH, temperature, turbidity, and dissolved oxygen readings every minute</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-3">
                                 <div class="w-8 h-8 bg-pink-100 text-pink-600 rounded-lg flex items-center justify-center font-bold flex-shrink-0 text-sm">2</div>
                                 <div>
                                     <h5 class="font-bold text-gray-900 text-sm">Cloud Transmission</h5>
-                                    <p class="text-xs text-gray-600">Data sent to ThingSpeak platform via WiFi for storage and processing</p>
+                                    <p class="text-xs text-gray-600">Data sent to ThingSpeak platform via 4G for storage and processing</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-3">
@@ -649,14 +676,14 @@
                                     <span class="text-blue-600">🔋</span>
                                     Power System
                                 </h4>
-                                <p class="text-sm text-gray-600">Solar-powered with battery backup for 24/7 operation. Designed for extended deployment periods.</p>
+                                <p class="text-sm text-gray-600">24V rechargeable battery with solar charging support for 24/7 operation. Designed for extended deployment periods.</p>
                             </div>
                             <div class="bg-white rounded-xl p-4 border border-green-100 shadow-md">
                                 <h4 class="font-bold text-gray-900 mb-2 flex items-center gap-2">
                                     <span class="text-green-600">📡</span>
                                     Data Transmission
                                 </h4>
-                                <p class="text-sm text-gray-600">WiFi connectivity enables real-time data transmission to ThingSpeak cloud platform for analysis and monitoring.</p>
+                                <p class="text-sm text-gray-600">4G cellular connectivity enables real-time data transmission to ThingSpeak cloud platform for analysis and monitoring.</p>
                             </div>
                             <div class="bg-white rounded-xl p-4 border border-yellow-100 shadow-md">
                                 <h4 class="font-bold text-gray-900 mb-2 flex items-center gap-2">
@@ -675,21 +702,21 @@
                                     <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold flex-shrink-0">1</div>
                                     <div>
                                         <h4 class="font-bold text-gray-900">Sensor Data Collection</h4>
-                                        <p class="text-sm text-gray-600">Arduino reads data from pH, temperature, and turbidity sensors</p>
+                                        <p class="text-sm text-gray-600">ESP32 reads data from pH, temperature, turbidity, and dissolved oxygen sensors</p>
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <div class="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center font-bold flex-shrink-0">2</div>
                                     <div>
                                         <h4 class="font-bold text-gray-900">Data Processing</h4>
-                                        <p class="text-sm text-gray-600">Arduino processes and formats sensor readings</p>
+                                        <p class="text-sm text-gray-600">ESP32 processes and formats sensor readings</p>
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <div class="w-12 h-12 bg-yellow-100 text-yellow-600 rounded-lg flex items-center justify-center font-bold flex-shrink-0">3</div>
                                     <div>
-                                        <h4 class="font-bold text-gray-900">WiFi Transmission</h4>
-                                        <p class="text-sm text-gray-600">Data sent wirelessly to ThingSpeak cloud platform</p>
+                                        <h4 class="font-bold text-gray-900">4G Transmission</h4>
+                                        <p class="text-sm text-gray-600">Data sent wirelessly to ThingSpeak cloud platform via 4G cellular</p>
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-4">
@@ -726,15 +753,15 @@
                                 <ul class="text-sm text-gray-700 space-y-1">
                                     <li><strong>VCC:</strong> 5V</li>
                                     <li><strong>GND:</strong> GND</li>
-                                    <li><strong>Signal:</strong> Analog Pin A0</li>
+                                    <li><strong>Signal:</strong> GPIO 34 (Analog)</li>
                                 </ul>
                             </div>
                             <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
                                 <h4 class="font-bold text-gray-900 mb-2">DS18B20 Temperature</h4>
                                 <ul class="text-sm text-gray-700 space-y-1">
-                                    <li><strong>VCC:</strong> 5V</li>
+                                    <li><strong>VCC:</strong> 3.3V</li>
                                     <li><strong>GND:</strong> GND</li>
-                                    <li><strong>Data:</strong> Digital Pin 2 (with 4.7kΩ pull-up resistor)</li>
+                                    <li><strong>Data:</strong> GPIO 15 (via extension board)</li>
                                 </ul>
                             </div>
                             <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
@@ -742,7 +769,15 @@
                                 <ul class="text-sm text-gray-700 space-y-1">
                                     <li><strong>VCC:</strong> 5V</li>
                                     <li><strong>GND:</strong> GND</li>
-                                    <li><strong>Signal:</strong> Analog Pin A1</li>
+                                    <li><strong>Signal:</strong> GPIO 35 (Analog)</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                                <h4 class="font-bold text-gray-900 mb-2">Dissolved Oxygen Sensor</h4>
+                                <ul class="text-sm text-gray-700 space-y-1">
+                                    <li><strong>VCC:</strong> 5V</li>
+                                    <li><strong>GND:</strong> GND</li>
+                                    <li><strong>Signal:</strong> GPIO 32 (Analog)</li>
                                 </ul>
                             </div>
                         </div>
@@ -754,22 +789,22 @@
                                 <li class="flex items-start gap-2">
                                     <span class="text-blue-600 font-bold mt-1">⚡</span>
                                     <div>
-                                        <strong>Operating Voltage:</strong> 5V DC
-                                        <p class="text-sm text-gray-600">Supplied via USB or external power adapter</p>
+                                        <strong>Main Battery:</strong> 24V Rechargeable
+                                        <p class="text-sm text-gray-600">Powers actuator and aerator via relays. ESP32 powered through voltage regulator.</p>
                                     </div>
                                 </li>
                                 <li class="flex items-start gap-2">
                                     <span class="text-blue-600 font-bold mt-1">🔋</span>
                                     <div>
-                                        <strong>Power Consumption:</strong> ~150-200mA (active)
-                                        <p class="text-sm text-gray-600">Optimized for battery-powered applications</p>
+                                        <strong>ESP32 Logic:</strong> 3.3V (regulated from 24V supply)
+                                        <p class="text-sm text-gray-600">Onboard CH340 for USB programming; 5V sensors powered via extension board</p>
                                     </div>
                                 </li>
                                 <li class="flex items-start gap-2">
                                     <span class="text-blue-600 font-bold mt-1">☀️</span>
                                     <div>
                                         <strong>Solar Power:</strong> Recommended for long-term deployment
-                                        <p class="text-sm text-gray-600">5W solar panel with charge controller</p>
+                                        <p class="text-sm text-gray-600">Solar panel with charge controller to maintain 24V battery</p>
                                     </div>
                                 </li>
                             </ul>
