@@ -553,6 +553,27 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="mt-8 bg-white rounded-xl p-6 border border-emerald-200 shadow-lg">
+                    <h4 class="text-lg font-bold text-gray-900 mb-4 text-center">How Chitosan + Bentonite Remove Excess Algae Cells</h4>
+                    <p class="text-gray-700 leading-relaxed text-center max-w-4xl mx-auto mb-6">
+                        After the wafer paper dissolves, the chitosan–bentonite mixture disperses through the water and rapidly forms larger aggregates that capture suspended algae cells. These heavier flocs settle out of the water column, reducing visible bloom density and helping restore clarity.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-emerald-50 rounded-lg p-4 border border-emerald-100">
+                            <div class="text-emerald-700 text-xs font-bold uppercase tracking-wider mb-2">1. Charge interaction</div>
+                            <p class="text-sm text-gray-700">Chitosan is a cationic biopolymer that attracts and binds to negatively charged algae cell surfaces, helping destabilize suspended cells.</p>
+                        </div>
+                        <div class="bg-teal-50 rounded-lg p-4 border border-teal-100">
+                            <div class="text-teal-700 text-xs font-bold uppercase tracking-wider mb-2">2. Flocculation &amp; bridging</div>
+                            <p class="text-sm text-gray-700">Polymer “bridging” links many cells into larger flocs, making the algae easier to separate from the water.</p>
+                        </div>
+                        <div class="bg-slate-50 rounded-lg p-4 border border-slate-200">
+                            <div class="text-slate-700 text-xs font-bold uppercase tracking-wider mb-2">3. Ballasting &amp; settling</div>
+                            <p class="text-sm text-gray-700">Bentonite clay adds mass and adsorption surface area, helping flocs sink and reducing the nutrients available for continued algal growth.</p>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="mt-8 bg-white rounded-xl p-6 border border-emerald-200 shadow-lg">
                     <h4 class="text-lg font-bold text-gray-900 mb-4 text-center">How It Works</h4>
@@ -749,22 +770,34 @@
 
         <!-- 3D Buoy Enclosure Visualization -->
         <section class="mb-16">
-            <div class="bg-white rounded-2xl shadow-xl border border-gray-200 p-8 lg:p-12">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div>
-                        <h2 class="text-3xl font-extrabold text-gray-900 mb-4">3D Buoy Enclosure</h2>
-                        <p class="text-gray-700 leading-relaxed mb-4">
-                            The Chito<span class="text-green-500">Net</span> buoy enclosure is modeled as a full 3D assembly, including the lower float body, central sensor column, and tapered tower for mounting solar panels and communication hardware.
-                        </p>
-                        <p class="text-gray-700 leading-relaxed mb-4">
-                            The final enclosure will be manufactured using <strong>UV-stabilized polyethylene (PE)</strong> so it can withstand long-term sun exposure, waves, and outdoor conditions without becoming brittle or discolored.
-                        </p>
-                        <p class="text-sm text-gray-500">
-                            This render represents the current buoy concept used for mechanical design, sensor placement, and mounting clearances.
-                        </p>
-                    </div>
-                    <div class="flex justify-center">
-                        <img src="/static/img/buoy-3d.png" alt="3D model render of the ChitoNet buoy enclosure" class="max-h-96 rounded-2xl shadow-2xl border border-gray-200 object-contain bg-slate-100">
+            <div class="relative overflow-hidden rounded-3xl border border-slate-200 shadow-2xl bg-gradient-to-br from-slate-50 via-white to-emerald-50">
+                <div class="absolute inset-0 pointer-events-none">
+                    <div class="absolute -top-24 -right-24 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-28 -left-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+                </div>
+                <div class="relative p-8 lg:p-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold tracking-widest uppercase mb-4">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                3D Modeling
+                            </div>
+                            <h2 class="text-3xl font-extrabold text-gray-900 mb-4">3D Buoy Enclosure</h2>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                The Chito<span class="text-green-500">Net</span> buoy enclosure is modeled as a full 3D assembly, including the lower float body, central sensor column, and tapered tower for mounting solar panels and communication hardware.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                The final enclosure will be manufactured using <strong>UV-stabilized polyethylene (PE)</strong> so it can withstand long-term sun exposure, waves, and outdoor conditions without becoming brittle or discolored.
+                            </p>
+                            <p class="text-sm text-gray-600">
+                                This render represents the current buoy concept used for mechanical design, sensor placement, and mounting clearances.
+                            </p>
+                        </div>
+                        <div class="flex justify-center">
+                            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-white/60 shadow-xl">
+                                <img src="/static/img/buoy-3d.png" alt="3D model render of the ChitoNet buoy enclosure" class="max-h-96 rounded-xl shadow-2xl border border-gray-200 object-contain bg-slate-100">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -772,72 +805,85 @@
 
         <!-- Wiring & Connections -->
         <section class="mb-16">
-            <div class="bg-white rounded-2xl shadow-xl border border-gray-200 p-8">
-                <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Wiring & Connections</h2>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Sensor Connections</h3>
-                        <div class="space-y-3">
-                            <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                                <h4 class="font-bold text-gray-900 mb-2">pH Sensor</h4>
-                                <ul class="text-sm text-gray-700 space-y-1">
-                                    <li><strong>VCC:</strong> 5V</li>
-                                    <li><strong>GND:</strong> GND</li>
-                                    <li><strong>Signal:</strong> GPIO 34 (Analog)</li>
-                                </ul>
-                            </div>
-                            <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                                <h4 class="font-bold text-gray-900 mb-2">DS18B20 Temperature</h4>
-                                <ul class="text-sm text-gray-700 space-y-1">
-                                    <li><strong>VCC:</strong> 3.3V</li>
-                                    <li><strong>GND:</strong> GND</li>
-                                    <li><strong>Data:</strong> GPIO 15 (via extension board)</li>
-                                </ul>
-                            </div>
-                            <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                                <h4 class="font-bold text-gray-900 mb-2">Turbidity Sensor</h4>
-                                <ul class="text-sm text-gray-700 space-y-1">
-                                    <li><strong>VCC:</strong> 5V</li>
-                                    <li><strong>GND:</strong> GND</li>
-                                    <li><strong>Signal:</strong> GPIO 35 (Analog)</li>
-                                </ul>
-                            </div>
-                            <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                                <h4 class="font-bold text-gray-900 mb-2">Dissolved Oxygen Sensor</h4>
-                                <ul class="text-sm text-gray-700 space-y-1">
-                                    <li><strong>VCC:</strong> 5V</li>
-                                    <li><strong>GND:</strong> GND</li>
-                                    <li><strong>Signal:</strong> GPIO 32 (Analog)</li>
-                                </ul>
+            <div class="relative overflow-hidden rounded-3xl border border-slate-200 shadow-2xl bg-gradient-to-br from-blue-50 via-white to-slate-50">
+                <div class="absolute inset-0 pointer-events-none">
+                    <div class="absolute -top-28 -left-24 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
+                </div>
+                <div class="relative p-8 lg:p-12">
+                    <div class="flex flex-col items-center text-center mb-8">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold tracking-widest uppercase mb-4">
+                            <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                            Integration
+                        </div>
+                        <h2 class="text-3xl font-extrabold text-gray-900 mb-2">Wiring &amp; Connections</h2>
+                        <p class="text-gray-600">Clear wiring blocks for fast assembly and troubleshooting</p>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="bg-white/70 backdrop-blur-sm rounded-2xl border border-white/60 shadow-xl p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-4">Sensor Connections</h3>
+                            <div class="space-y-3">
+                                <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                                    <h4 class="font-bold text-gray-900 mb-2">pH Sensor</h4>
+                                    <ul class="text-sm text-gray-700 space-y-1">
+                                        <li><strong>VCC:</strong> 5V</li>
+                                        <li><strong>GND:</strong> GND</li>
+                                        <li><strong>Signal:</strong> GPIO 34 (Analog)</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                                    <h4 class="font-bold text-gray-900 mb-2">DS18B20 Temperature</h4>
+                                    <ul class="text-sm text-gray-700 space-y-1">
+                                        <li><strong>VCC:</strong> 3.3V</li>
+                                        <li><strong>GND:</strong> GND</li>
+                                        <li><strong>Data:</strong> GPIO 15 (via extension board)</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                                    <h4 class="font-bold text-gray-900 mb-2">Turbidity Sensor</h4>
+                                    <ul class="text-sm text-gray-700 space-y-1">
+                                        <li><strong>VCC:</strong> 5V</li>
+                                        <li><strong>GND:</strong> GND</li>
+                                        <li><strong>Signal:</strong> GPIO 35 (Analog)</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                                    <h4 class="font-bold text-gray-900 mb-2">Dissolved Oxygen Sensor</h4>
+                                    <ul class="text-sm text-gray-700 space-y-1">
+                                        <li><strong>VCC:</strong> 5V</li>
+                                        <li><strong>GND:</strong> GND</li>
+                                        <li><strong>Signal:</strong> GPIO 32 (Analog)</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Power Requirements</h3>
-                        <div class="bg-blue-50 rounded-xl p-6 border border-blue-200">
-                            <ul class="space-y-3 text-gray-700">
-                                <li class="flex items-start gap-2">
-                                    <span class="text-blue-600 font-bold mt-1">⚡</span>
-                                    <div>
-                                        <strong>Main Battery:</strong> 24V Rechargeable
-                                        <p class="text-sm text-gray-600">Powers actuator and aerator via relays. ESP32 powered through voltage regulator.</p>
-                                    </div>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-blue-600 font-bold mt-1">🔋</span>
-                                    <div>
-                                        <strong>ESP32 Logic:</strong> 3.3V (regulated from 24V supply)
-                                        <p class="text-sm text-gray-600">Onboard CH340 for USB programming; 5V sensors powered via extension board</p>
-                                    </div>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-blue-600 font-bold mt-1">☀️</span>
-                                    <div>
-                                        <strong>Solar Power:</strong> Solar panels to charge the 24V battery
-                                        <p class="text-sm text-gray-600">The buoy uses solar panels to keep the 24V battery charged during long-term deployment.</p>
-                                    </div>
-                                </li>
-                            </ul>
+                        <div class="bg-white/70 backdrop-blur-sm rounded-2xl border border-white/60 shadow-xl p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-4">Power Requirements</h3>
+                            <div class="bg-blue-50 rounded-xl p-6 border border-blue-200">
+                                <ul class="space-y-3 text-gray-700">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-blue-600 font-bold mt-1">⚡</span>
+                                        <div>
+                                            <strong>Main Battery:</strong> 24V Rechargeable
+                                            <p class="text-sm text-gray-600">Powers actuator and aerator via relays. ESP32 powered through voltage regulator.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-blue-600 font-bold mt-1">🔋</span>
+                                        <div>
+                                            <strong>ESP32 Logic:</strong> 3.3V (regulated from 24V supply)
+                                            <p class="text-sm text-gray-600">Onboard CH340 for USB programming; 5V sensors powered via extension board</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-blue-600 font-bold mt-1">☀️</span>
+                                        <div>
+                                            <strong>Solar Power:</strong> Solar panels to charge the 24V battery
+                                            <p class="text-sm text-gray-600">The buoy uses solar panels to keep the 24V battery charged during long-term deployment.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
